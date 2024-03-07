@@ -9,6 +9,14 @@ from streamlit_extras.switch_page_button import switch_page
 
 from FileReader.pdfFile import PDFDBStore
 
+# Check if 'key' already exists in session_state
+# If not, then initialize it
+if 'key' not in st.session_state:
+    st.session_state['key'] = 'value'
+
+# Session State also supports the attribute based syntax
+if 'key' not in st.session_state:
+    st.session_state.key = 'value'
 
 @st.cache_resource
 def save_pdf_image(uploaded_file):
