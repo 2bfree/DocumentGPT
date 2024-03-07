@@ -1,16 +1,15 @@
-aiohttp==3.9.3
-jusText==3.0.0
-langchain==0.1.10
-openai==1.13.3
-pillow==10.2.0
-pydantic==2.6.3
-PyMuPDF==1.23.26
-pypdf==4.1.0
-requests==2.31.0
-streamlit==1.31.1
-streamlit-extras==0.4.0
-
-WARNING(pigar): some manual fixes are required since pigar has found duplicate requirements for the same import name.
-# WARNING(pigar): the following duplicate requirements are for import name: youtube_search
-youtube-search==2.1.2
-youtube-search-fork==1.2.5
+streamlit-extras==0.2.7
+openai==0.27.8
+langchain==0.0.234
+pypdf==3.9.1
+tiktoken==0.4.0
+faiss-cpu==1.7.4
+youtube_search==2.1.2
+aiohttp~=3.8.4
+pydantic~=1.10.9
+google-search-results~=2.4.2
+jusText~=3.0.0
+requests~=2.31.0
+arxiv~=1.4.7
+pymupdf~=1.22.5
+Pillow~=9.5.0
