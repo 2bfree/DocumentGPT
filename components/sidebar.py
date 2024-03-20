@@ -31,6 +31,13 @@ def sidebar():
 
         st.session_state['selected_model'] = model
 
+        return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
+        show_full_doc = st.checkbox("업로드한 파일 내용 보기")
+
+        # session_state에 값 저장
+        st.session_state["return_all_chunks"] = return_all_chunks
+        st.session_state["show_full_doc"] = show_full_doc
+
         st.markdown("---")
 
         # faq()

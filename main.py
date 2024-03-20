@@ -55,10 +55,13 @@ uploaded_file = st.file_uploader(
 
 selected_model = st.session_state.get("selected_model","default_model")
 
-with st.expander("세부 옵션 보기"):
-    return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
-    show_full_doc = st.checkbox("업로드한 파일 내용 보기")
+# with st.expander("세부 옵션 보기"):
+#     return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
+#     show_full_doc = st.checkbox("업로드한 파일 내용 보기")
 
+# 세부 옵션 값 불러오기
+return_all_chunks = st.session_state.get("return_all_chunks", False)
+show_full_doc = st.session_state.get("show_full_doc", False)
 
 if not uploaded_file:
     st.stop()
