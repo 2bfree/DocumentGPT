@@ -21,7 +21,7 @@ from core.utils import get_llm
 
 EMBEDDING = "openai"
 VECTOR_STORE = "faiss"
-MODEL_LIST = ["gpt-3.5-turbo", "gpt-4", "GPT-4-Turbo"]
+MODEL_LIST = ["gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"]
 
 # Uncomment to enable debug mode
 # MODEL_LIST.insert(0, "debug")
