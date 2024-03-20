@@ -31,7 +31,7 @@ def sidebar():
 
         if not api_key_input:
             st.warning(
-                "OpenAI API key가 입력되지 않았습니다.\n"
+                "OpenAI API key가 없습니다.    \n"
                 "API key는 https://platform.openai.com/account/api-keys.에서 받을 수 있습니다."
             )
 
