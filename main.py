@@ -112,7 +112,7 @@ if submit:
 
     # 문장으로 나누기
     sentences_answer = re.split('(?<=\.)\s', result.answer)
-    sentences_source = re.split('(?<=\.)\s', result.source)
+    sentences_source = re.split('(?<=\.)\s', result.sources)
 
     with answer_col:
         st.markdown("#### Answer")
