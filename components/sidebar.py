@@ -32,7 +32,9 @@ def sidebar():
         if not api_key_input:
             st.warning(
                 "OpenAI API key가 없습니다.    \n"
-                "API key는 https://platform.openai.com/account/api-keys.에서 받을 수 있습니다."
+                "API key는"
+                "https://platform.openai.com/account/api-keys"
+                "에서 받을 수 있습니다."
             )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
