@@ -112,7 +112,6 @@ if submit:
 
     # 문장으로 나누기
     sentences_answer = re.split('(?<=\.)\s', result.answer)
-    sentences_source = re.split('(?<=\.)\s', result.sources)
 
     with answer_col:
         st.markdown("#### Answer")
@@ -123,9 +122,6 @@ if submit:
     with sources_col:
         st.markdown("#### Sources")
         for source in result.sources:
-            for sentences_source in sentences_source :
-                st.markdown(sentences_answer.page_content)
-            st.markdown(sentences_answer.metadata["source"])                
-            # st.markdown(source.page_content)
-            # st.markdown(source.metadata["source"])
+            st.markdown(source.page_content)
+            st.markdown(source.metadata["source"])
             st.markdown("---")
