@@ -15,10 +15,9 @@ def sidebar():
             "업로드한 문서에 대해 질문하면 "
             "문서 내용만 사용하여 정확한 답변하고 참조한 문서 위치를 알려주는\n\n"
             "사내 GPT 서비스의 Prototype입니다.\n\n"
-            "[OpenAI API key](https://platform.openai.com/account/api-keys) 입력 후 사용 가능합니다."  # noqa: E501
         )
         api_key_input = st.text_input(
-            "OpenAI API Key",
+            "[OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
             type="password",
             placeholder="Paste your OpenAI API key here (sk-...)",
             help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
