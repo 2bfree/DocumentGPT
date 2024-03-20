@@ -45,6 +45,6 @@ class FakeVectorStore(VectorStore):
     ) -> List[Document]:
         return [
             # Document(page_content=text, metadata={"source": f"{i+1}-{1}"})
-            Document(page_content=text, metadata={"source": f"{i+1}-{i+1}"})
+            Document(page_content=text, metadata={"source": f"{i+1}-{1}"})
             for i, text in enumerate(self.texts)
         ]
