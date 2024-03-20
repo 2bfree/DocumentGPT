@@ -38,10 +38,10 @@ sidebar()
 openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 
-if not openai_api_key:
-    st.warning(
-        "OpenAI API key가 입력되지 않았습니다."
-    )
+# if not openai_api_key:
+#     st.warning(
+#         "OpenAI API key가 입력되지 않았습니다."
+#     )
 
 
 uploaded_file = st.file_uploader(
