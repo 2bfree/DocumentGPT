@@ -53,7 +53,7 @@ uploaded_file = st.file_uploader(
 
 model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
 
-with st.expander("Advanced Options"):
+with st.expander("세부 옵션 보기"):
     return_all_chunks = st.checkbox("Show all chunks retrieved from vector search")
     show_full_doc = st.checkbox("Show parsed contents of the document")
 
