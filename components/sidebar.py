@@ -17,6 +17,7 @@ def sidebar():
             "질문에 대한 정확한 답변과       \n"
             "참조한 내용의 위치를 알려주는    \n"
             "**사내 GPT 서비스의 Prototype**입니다."
+            "     \n"
         )
 
         api_key_input = st.text_input(
