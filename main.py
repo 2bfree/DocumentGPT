@@ -40,8 +40,7 @@ openai_api_key = st.session_state.get("OPENAI_API_KEY")
 
 if not openai_api_key:
     st.warning(
-        "OpenAI API key를 사이드바에 입력하셔야. 시작됩니다. API key는"
-        " https://platform.openai.com/account/api-keys.에서 발급 받을 수 있습니다."
+        "OpenAI API key가 입력되지 않았습니다."
     )
 
 
