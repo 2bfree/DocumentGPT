@@ -71,6 +71,7 @@ chunked_file = chunk_file(file, chunk_size=300, chunk_overlap=0)
 if not is_file_valid(file):
     st.stop()
 
+model = sidebar.model
 
 if not is_open_ai_key_valid(openai_api_key, model):
     st.stop()
