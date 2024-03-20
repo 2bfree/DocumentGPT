@@ -86,7 +86,7 @@ with st.spinner("문서를 인덱싱하고 있습니다. 시간이 조금 오래
     )
 
 with st.form(key="qa_form"):
-    query = st.text_area("등록한 문서에 대해 물어보세요.")
+    query = st.text_area("업로드한 문서에 대해 물어보세요.")
     submit = st.form_submit_button("질문하기")
 
 
