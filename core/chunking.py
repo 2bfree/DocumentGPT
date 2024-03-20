@@ -2,9 +2,10 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from core.parsing import File
 
+# MODEL_LIST = ["gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"]
 
 def chunk_file(
-    file: File, chunk_size: int, chunk_overlap: int = 0, model_name="gpt-3.5-turbo"
+    file: File, chunk_size: int, chunk_overlap: int = 0, model_name="gpt-4-1106-preview"
 ) -> File:
     """Chunks each document in a file into smaller documents
     according to the specified chunk size and overlap
