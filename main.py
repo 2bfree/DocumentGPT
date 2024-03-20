@@ -48,7 +48,7 @@ if not openai_api_key:
 uploaded_file = st.file_uploader(
     "검색할 파일을 업로드 하세요. (현재는 pdf, docx, txt만 가능합니다.)",
     type=["pdf", "docx", "txt"],
-    help="스캔한 문서의 분석은 아직 못합니다.",
+    help="스캔한 문서 분석은 아직 못합니다.",
 )
 
 model: str = st.selectbox("GPT 모델 선택", options=MODEL_LIST)  # type: ignore
