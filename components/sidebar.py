@@ -12,8 +12,8 @@ def sidebar():
     with st.sidebar:
         st.markdown(
             "## SFA KnowledgeGPT는\n"
-            "업로드한 문서에 대해 질문하면  "
-            "문서에 있는 내용만 사용하여 정확한 답변하고 참조한 문서 위치를 알려주는\n\n"
+            "업로드한 문서에 있는 내용만 사용하여"
+            "질문에 대한 정확한 답변과 참조한 내용의 위치를 알려주는\n\n"
             "사내 GPT 서비스의 Prototype입니다."
         )
 
