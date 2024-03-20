@@ -1,5 +1,5 @@
 from langchain.vectorstores import VectorStore
-from typing import Iterable, List, Any, Optional
+from typing import Iterable, List, Any, Optional, Union
 from langchain.docstore.document import Document
 from langchain.embeddings.base import Embeddings
 from langchain.embeddings.fake import FakeEmbeddings as FakeEmbeddingsBase
@@ -25,7 +25,7 @@ class FakeVectorStore(VectorStore):
         self.texts: List[str] = texts
 
     def add_texts(
-        self, texts: Iterable[str], metadatas: List[dict] | None = None, **kwargs: Any
+        self, texts: Iterable[str], metadatas: Optional[List[dict]] | None = None, **kwargs: Any
     ) -> List[str]:
         self.texts.extend(texts)
         return self.texts
