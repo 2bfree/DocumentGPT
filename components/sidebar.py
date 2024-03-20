@@ -27,7 +27,7 @@ def sidebar():
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
         
-        model: str = st.selectbox("GPT 모델 선택", options=MODEL_LIST)  # type: ignore
+        model: str = st.selectbox("GPT 모델을 선택하세요.", options=MODEL_LIST)  # type: ignore
 
         st.session_state['selected_model'] = model
 
