@@ -53,6 +53,8 @@ uploaded_file = st.file_uploader(
 
 # model: str = st.selectbox("GPT 모델 선택", options=MODEL_LIST)  # type: ignore
 
+selected_model = st.session_state.get("selected_model","default_model")
+
 with st.expander("세부 옵션 보기"):
     return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
     show_full_doc = st.checkbox("업로드한 파일 내용 보기")
@@ -71,17 +73,15 @@ chunked_file = chunk_file(file, chunk_size=300, chunk_overlap=0)
 if not is_file_valid(file):
     st.stop()
 
-model = sidebar.model
-
-if not is_open_ai_key_valid(openai_api_key, model):
+if not is_open_ai_key_valid(openai_api_key, selected_model):
     st.stop()
 
 
-with st.spinner("문서를 인덱싱하고 있습니다. 시간이 조금 거릴 수 있습니다."):
+with st.spinner("문서를 인덱싱하고 있습니다. 시간이 조금 오래 걸릴 수 있습니다."):
     folder_index = embed_files(
         files=[chunked_file],
-        embedding=EMBEDDING if model != "debug" else "debug",
-        vector_store=VECTOR_STORE if model != "debug" else "debug",
+        embedding=EMBEDDING if selected_model != "debug" else "debug",
+        vector_store=VECTOR_STORE if selected_model != "debug" else "debug",
         openai_api_key=openai_api_key,
     )
 
@@ -103,7 +103,7 @@ if submit:
     # Output Columns
     answer_col, sources_col = st.columns(2)
 
-    llm = get_llm(model=model, openai_api_key=openai_api_key, temperature=0.2)
+    llm = get_llm(model=selected_model, openai_api_key=openai_api_key, temperature=0.2)
     result = query_folder(
         folder_index=folder_index,
         query=query,

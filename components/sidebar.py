@@ -29,6 +29,8 @@ def sidebar():
         
         model: str = st.selectbox("GPT 모델 선택", options=MODEL_LIST)  # type: ignore
 
+        st.session_state['selected_model'] = model
+
         st.markdown("---")
 
         # faq()
