@@ -29,6 +29,12 @@ def sidebar():
             or st.session_state.get("OPENAI_API_KEY", ""),
         )
 
+        if not api_key_input:
+            st.warning(
+                "OpenAI API key를 사이드바에 입력하셔야. 시작됩니다. API key는"
+                " https://platform.openai.com/account/api-keys.에서 발급 받을 수 있습니다."
+            )
+
         st.session_state["OPENAI_API_KEY"] = api_key_input
         
         model: str = st.selectbox("사용할 GPT 모델을 선택하세요.", options=MODEL_LIST)  # type: ignore
