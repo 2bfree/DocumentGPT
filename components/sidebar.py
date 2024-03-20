@@ -12,10 +12,10 @@ def sidebar():
     with st.sidebar:
         st.markdown(
             "## About\n"
-            "SFA KnowledgeGPT는 제공된 데이터(문서)에 대해 질문하면\n\n"
-            "문서에 근거한 정확한 답변과 출처를 볼 수 있는\n\n"
+            "SFA KnowledgeGPT는 제공된 데이터(문서)에 대해 질문하면"
+            "문서에 근거한 정확한 답변과 출처를 볼 수 있는"
             "사내 GPT 서비스의 Prototype입니다.\n\n"
-            "아래에 [OpenAI API key](https://platform.openai.com/account/api-keys) 입력하세요."  # noqa: E501
+            "[OpenAI API key](https://platform.openai.com/account/api-keys) 입력 후 사용 가능합니다."  # noqa: E501
         )
         api_key_input = st.text_input(
             "OpenAI API Key",
