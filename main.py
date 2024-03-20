@@ -105,7 +105,7 @@ if submit:
     # Output Columns
     answer_col, sources_col = st.columns(2)
 
-    llm = get_llm(model=selected_model, openai_api_key=openai_api_key, temperature=0.2)
+    llm = get_llm(model=selected_model, openai_api_key=openai_api_key, temperature=0.1)
     result = query_folder(
         folder_index=folder_index,
         query=query,
