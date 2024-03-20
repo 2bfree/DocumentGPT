@@ -51,7 +51,7 @@ uploaded_file = st.file_uploader(
     help="스캔한 문서의 분석은 아직 못합니다.",
 )
 
-model: str = st.selectbox("Model", options=MODEL_LIST)  # type: ignore
+model: str = st.selectbox("분석 모델 선택", options=MODEL_LIST)  # type: ignore
 
 with st.expander("세부 옵션 보기"):
     return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
