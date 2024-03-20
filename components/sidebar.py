@@ -22,7 +22,7 @@ def sidebar():
         st.markdown("---")
 
         api_key_input = st.text_input(
-            "[OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
+            "OpenAI API key 를 입력하세요.",
             type="password",
             placeholder="sk-############",
             value=os.environ.get("OPENAI_API_KEY", None)
@@ -31,8 +31,8 @@ def sidebar():
 
         if not api_key_input:
             st.warning(
-                "OpenAI API key를 사이드바에 입력하셔야. 시작됩니다. API key는"
-                " https://platform.openai.com/account/api-keys.에서 발급 받을 수 있습니다."
+                "OpenAI API key가 입력되지 않았습니다.\n"
+                "API key는 https://platform.openai.com/account/api-keys.에서 받을 수 있습니다."
             )
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
