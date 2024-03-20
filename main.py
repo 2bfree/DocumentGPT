@@ -1,3 +1,4 @@
+import re
 import streamlit as st
 
 from components.sidebar import sidebar
@@ -109,9 +110,13 @@ if submit:
         llm=llm,
     )
 
+    # 문장으로 나누기
+    sentences_answer = re.split('(?<=\.)\s', result.answer)
+
     with answer_col:
         st.markdown("#### Answer")
-        st.markdown(result.answer)
+        # st.markdown(result.answer)
+        st.markdown(sentences_answer)
 
     with sources_col:
         st.markdown("#### Sources")
