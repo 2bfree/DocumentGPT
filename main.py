@@ -76,7 +76,7 @@ if not is_open_ai_key_valid(openai_api_key, model):
     st.stop()
 
 
-with st.spinner("Indexing document... This may take a while⏳"):
+with st.spinner("문서를 인덱싱하고 있습니다. 시간이 조금 거릴 수 있습니다."):
     folder_index = embed_files(
         files=[chunked_file],
         embedding=EMBEDDING if model != "debug" else "debug",
@@ -85,12 +85,12 @@ with st.spinner("Indexing document... This may take a while⏳"):
     )
 
 with st.form(key="qa_form"):
-    query = st.text_area("Ask a question about the document")
-    submit = st.form_submit_button("Submit")
+    query = st.text_area("등록한 문서에 대해 물어보세요.")
+    submit = st.form_submit_button("질문하기")
 
 
 if show_full_doc:
-    with st.expander("Document"):
+    with st.expander("문서 자세히 보기"):
         # Hack to get around st.markdown rendering LaTeX
         st.markdown(f"<p>{wrap_doc_in_html(file.docs)}</p>", unsafe_allow_html=True)
 
