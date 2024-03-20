@@ -1,5 +1,5 @@
 from langchain.vectorstores import VectorStore
-from typing import Iterable, List, Any
+from typing import Iterable, List, Any, Optional
 from langchain.docstore.document import Document
 from langchain.embeddings.base import Embeddings
 from langchain.embeddings.fake import FakeEmbeddings as FakeEmbeddingsBase
@@ -44,6 +44,7 @@ class FakeVectorStore(VectorStore):
         self, query: str, k: int = 4, **kwargs: Any
     ) -> List[Document]:
         return [
-            Document(page_content=text, metadata={"source": f"{i+1}-{1}"})
+            # Document(page_content=text, metadata={"source": f"{i+1}-{1}"})
+            Document(page_content=text, metadata={"source": f"{i+1}-{i+1}"})
             for i, text in enumerate(self.texts)
         ]
