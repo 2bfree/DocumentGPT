@@ -11,7 +11,8 @@ MODEL_LIST = ["gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"]
 def sidebar():
     with st.sidebar:
         st.markdown(
-            "## SFA KnowledgeGPT는\n"
+            "## About\n"
+            "**SFA KnowledgeGPT는**    \n"
             "업로드한 문서에 있는 내용만 사용하여    \n"
             "질문에 대한 정확한 답변과       \n"
             "참조한 내용의 위치를 알려주는    \n"
