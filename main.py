@@ -55,7 +55,7 @@ model: str = st.selectbox("GPT 모델 선택", options=MODEL_LIST)  # type: igno
 
 with st.expander("세부 옵션 보기"):
     return_all_chunks = st.checkbox("벡터 검색에서 검색된 모든 조각(chunks) 보기")
-    show_full_doc = st.checkbox("업로드한 문서 내용 보기")
+    show_full_doc = st.checkbox("업로드한 파일 내용 보기")
 
 
 if not uploaded_file:
