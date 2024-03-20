@@ -22,7 +22,7 @@ def sidebar():
         api_key_input = st.text_input(
             "[OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
             type="password",
-            placeholder="OpenAI API key (sk-)",
+            placeholder="sk-############",
             value=os.environ.get("OPENAI_API_KEY", None)
             or st.session_state.get("OPENAI_API_KEY", ""),
         )
