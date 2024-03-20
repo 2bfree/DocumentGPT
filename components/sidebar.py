@@ -12,8 +12,9 @@ def sidebar():
     with st.sidebar:
         st.markdown(
             "## About\n"
-            "SFA KnowledgeGPT를 사용하면 문서에 대한 질문을 하고 즉각적인 인용과 함께 정확한 답변을 받을 수 있습니다. "
-            "   "
+            "SFA KnowledgeGPT는 제공된 데이터(문서)에 대한 질문을 하면\n"
+            "문서에 근거한 정확한 답변과 출처를 볼 수 있는\n"
+            "사내 GPT 서비스의 Prototype입니다.\n\n"
             "아래에 [OpenAI API key](https://platform.openai.com/account/api-keys) 입력하세요.n"  # noqa: E501
         )
         api_key_input = st.text_input(
