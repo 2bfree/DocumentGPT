@@ -16,6 +16,9 @@ def sidebar():
             "문서 내용만 사용하여 정확한 답변하고 참조한 문서 위치를 알려주는\n\n"
             "사내 GPT 서비스의 Prototype입니다.\n\n"
         )
+
+        st.markdown("---")
+
         api_key_input = st.text_input(
             "[OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
             type="password",
