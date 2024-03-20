@@ -114,13 +114,13 @@ if submit:
     sentences_answer = re.split('(?<=\.)\s', result.answer)
 
     with answer_col:
-        st.markdown("#### Answer")
+        st.markdown("#### 결과")
         # st.markdown(result.answer)
         for sentences_answer in sentences_answer :
             st.markdown(sentences_answer)
 
     with sources_col:
-        st.markdown("#### Sources")
+        st.markdown("#### 출처")
         for source in result.sources:
             st.markdown(source.page_content)
             st.markdown(source.metadata["source"])
