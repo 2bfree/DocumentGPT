@@ -1,5 +1,5 @@
 from langchain.vectorstores import VectorStore
-from typing import Iterable, List, Any
+from typing import Iterable, List, Any, Union
 from langchain.docstore.document import Document
 from langchain.embeddings.base import Embeddings
 from langchain.embeddings.fake import FakeEmbeddings as FakeEmbeddingsBase
