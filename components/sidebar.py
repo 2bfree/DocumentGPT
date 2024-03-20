@@ -19,8 +19,6 @@ def sidebar():
             "**사내 GPT 서비스의 Prototype**입니다."
         )
 
-        st.markdown("---")
-
         api_key_input = st.text_input(
             "OpenAI API key 를 입력하세요.",
             type="password",
