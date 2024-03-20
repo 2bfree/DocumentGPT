@@ -17,7 +17,7 @@ def sidebar():
             "사내 GPT 서비스의 Prototype입니다.\n\n"
         )
         api_key_input = st.text_input(
-            "1. [OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
+            "[OpenAI API key](https://platform.openai.com/account/api-keys)를 입력하세요.",
             type="password",
             placeholder="Paste your OpenAI API key here (sk-...)",
             help="You can get your API key from https://platform.openai.com/account/api-keys.",  # noqa: E501
@@ -27,7 +27,7 @@ def sidebar():
 
         st.session_state["OPENAI_API_KEY"] = api_key_input
         
-        model: str = st.selectbox("2. 사용할 GPT 모델을 선택하세요.", options=MODEL_LIST)  # type: ignore
+        model: str = st.selectbox("사용할 GPT 모델을 선택하세요.", options=MODEL_LIST)  # type: ignore
 
         st.session_state['selected_model'] = model
 
