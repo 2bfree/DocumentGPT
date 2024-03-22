@@ -70,7 +70,7 @@ try:
 except Exception as e:
     display_file_read_error(e, file_name=uploaded_file.name)
 
-chunked_file = chunk_file(file, chunk_size=300, chunk_overlap=0)
+chunked_file = chunk_file(file, chunk_size=500, chunk_overlap=50)
 
 if not is_file_valid(file):
     st.stop()
