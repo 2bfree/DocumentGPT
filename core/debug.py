@@ -42,7 +42,7 @@ class FakeVectorStore(VectorStore):
         return cls(texts=list(texts))
 
     def similarity_search(
-        self, query: str, k: int = 4, **kwargs: Any
+        self, query: str, k: int = 10, **kwargs: Any
     ) -> List[Document]:
         return [
             # Document(page_content=text, metadata={"source": f"{i+1}-{1}"})
