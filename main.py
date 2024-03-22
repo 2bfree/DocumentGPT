@@ -113,6 +113,7 @@ if submit:
         llm=llm,
     )
 
+
     # 문장으로 나누기
     sentences_answer = re.split('(?<=\.)\s', result.answer)
 
