@@ -70,7 +70,7 @@ try:
 except Exception as e:
     display_file_read_error(e, file_name=uploaded_file.name)
 
-chunked_file = chunk_file(file, chunk_size=200, chunk_overlap=50)
+chunked_file = chunk_file(file, chunk_size=200, chunk_overlap=20) #overlap은 chunk size의 10%에 맞춤
 
 if not is_file_valid(file):
     st.stop()
