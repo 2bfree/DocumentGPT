@@ -103,7 +103,7 @@ if submit:
         st.stop()
 
     # Output Columns
-    answer_col, sources_col = st.columns(2)
+    # answer_col, sources_col = st.columns(2)
 
     llm = get_llm(model=selected_model, openai_api_key=openai_api_key, temperature=0.3)
     result = query_folder(
@@ -116,15 +116,15 @@ if submit:
     # 문장으로 나누기
     sentences_answer = re.split('(?<=\.)\s', result.answer)
 
-    with answer_col:
-        st.markdown("#### 결과")
+    # with answer_col:
+    st.markdown("#### 결과")
         # st.markdown(result.answer)
-        for sentences_answer in sentences_answer :
-            st.markdown(sentences_answer)
+    for sentences_answer in sentences_answer :
+        st.markdown(sentences_answer)
 
-    with sources_col:
-        st.markdown("#### 출처")
-        for source in result.sources:
-            st.markdown(source.page_content)
-            st.markdown(source.metadata["source"])
-            st.markdown("---")
+    # with sources_col:
+    st.markdown("#### 출처")
+    for source in result.sources:
+        st.markdown(source.page_content)
+        st.markdown(source.metadata["source"])
+        st.markdown("---")
