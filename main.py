@@ -119,9 +119,9 @@ if submit:
 
     # with answer_col:
     st.markdown("#### 결과")
-        # st.markdown(result.answer)
+    st.markdown(result.answer)
     # for sentences_answer in sentences_answer :
-    st.markdown(sentences_answer)
+    #     st.markdown(sentences_answer)
 
     # with sources_col:
     st.markdown("#### 출처")
