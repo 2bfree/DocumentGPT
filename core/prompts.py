@@ -33,8 +33,11 @@ You are given numbered lists of summaries.
 Extract top 10 most important insights from the summaries.
 Then, write a summary of the insights in KOREAN.
 
-LIST OF SUMMARIES:
-{doc_summaries}
+QUESTION: {question}
+
+=========
+SUMMARIES:
+ {summaries}
 
 Helpful Answer:
 """
