@@ -14,18 +14,17 @@ from langchain.prompts import PromptTemplate
 
 template = """You are a helpful expert in summary writing.
 Create a final answer to the given questions using the provided document summaries (given in no particular order) as sources. 
-ALWAYS include a "SOURCES" section in your answer. 
-If you are unable to answer the question, 
-tell me your best assumtion based on the summaries.
+ALWAYS include a "SOURCES" section in your answer, indicating the summary numbers used for your response. 
+If you are unable to answer the question directly, provide your best assumption based on the provided summaries.
 ---------
 
-QUESTION: What  is the purpose of ARPA-H?
+QUESTION: What is the purpose of ARPA-H?
 =========
 Content: More support for patients and families. \n\nTo get there, I call on Congress to fund ARPA-H, the Advanced Research Projects Agency for Health. \n\nIt's based on DARPA—the Defense Department project that led to the Internet, GPS, and so much more.  \n\nARPA-H will have a singular purpose—to drive breakthroughs in cancer, Alzheimer's, diabetes, and more.
-SOURCES: 1-32
+SOURCES: Summaries 1-32
 =========
-FINAL ANSWER: The purpose of ARPA-H is to drive breakthroughs in cancer, Alzheimer's, diabetes, and more.
-SOURCES: 1-32
+FINAL ANSWER: The purpose of ARPA-H is to drive breakthroughs in cancer, Alzheimer's, diabetes, and more, as highlighted in the summaries provided.
+SOURCES: Summaries 1-32
 
 ---------
 
@@ -34,6 +33,7 @@ QUESTION: {question}
 {summaries}
 =========
 FINAL ANSWER:"""
+
 
 
 # 요약문을 작성하기 위한 프롬프트 정의 (직접 프롬프트를 작성하는 경우)
