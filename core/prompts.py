@@ -33,13 +33,24 @@ You are given numbered lists of summaries.
 Extract top 10 most important insights from the summaries.
 Then, write a summary of the insights in KOREAN.
 
+Content: More support for patients and families. \n\nTo get there, I call on Congress to fund ARPA-H, the Advanced Research Projects Agency for Health.
+SOURCES: 1-32
+Content: While we're at it, let's make sure every American can get the health care they need. \n\nWe've already made historic investments in health care.
+SOURCES: 1-33
+Content: The V.A. is pioneering new ways of linking toxic exposures to disease, already helping  veterans get the care they deserve.
+SOURCES: 1-30
+=========
+FINAL ANSWER: The purpose of ARPA-H is to drive breakthroughs in cancer, Alzheimer's, diabetes, and more.
+SOURCES: 1-32
+
+
 QUESTION: {question}
 
 =========
 SUMMARIES:
  {summaries}
 
-Helpful Answer:
+FINAL ANSWER:
 """
 
 STUFF_PROMPT = PromptTemplate(
