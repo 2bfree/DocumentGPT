@@ -33,6 +33,10 @@ You are given numbered lists of summaries.
 Extract top 10 most important insights from the summaries.
 Then, write a summary of the insights in KOREAN.
 
+---------
+
+QUESTION: What  is the purpose of ARPA-H?
+=========
 Content: More support for patients and families. \n\nTo get there, I call on Congress to fund ARPA-H, the Advanced Research Projects Agency for Health.
 SOURCES: 1-32
 Content: While we're at it, let's make sure every American can get the health care they need. \n\nWe've already made historic investments in health care.
@@ -45,13 +49,11 @@ SOURCES: 1-32
 
 
 QUESTION: {question}
-
 =========
 SUMMARIES:
  {summaries}
-
-FINAL ANSWER:
-"""
+=========
+FINAL ANSWER:"""
 
 STUFF_PROMPT = PromptTemplate(
     template=template, input_variables=["summaries", "question"]
