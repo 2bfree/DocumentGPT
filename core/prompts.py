@@ -10,8 +10,8 @@ from langchain.prompts import PromptTemplate
 
 template = """You are a helpful expert in summary writing.
 You are given numbered lists of summaries.
-Extract top 10 most important insights from the summaries.
-Then, write a summary of the insights in KOREAN.
+Write a summary of the insights in KOREAN.
+Then, extract top 5 most important insights from the summaries.
 
 ---------
 
