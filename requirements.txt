@@ -2,7 +2,7 @@ streamlit
 streamlit-aggrid
 streamlit-chat
 streamlit-extras
-openai
+openai>=0.28.1
 langchain
 pypdf
 tiktoken
