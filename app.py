@@ -9,8 +9,9 @@ import streamlit as st
 
 def switch_page(page_name: str):
     """페이지 이름을 쿼리 파라미터에 설정하고 앱을 재실행합니다."""
-    st.experimental_set_query_params(page=page_name)
+    st.query_params = {"page": page_name}
     st.experimental_rerun()
+    
 from FileReader.pdfFile import PDFDBStore
 
 

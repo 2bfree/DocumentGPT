@@ -8,20 +8,17 @@ from youtube_search import YoutubeSearch
 import utils
 import base64
 
-
-
-+# 업로드 페이지에서 넘어온 쿼리 파라미터를 받아올 때 사용하는 로직
-+# 이 파일 최상단에 넣어 주시면, 직접 URL 파라미터에 맞춰 페이지가 바뀝니다.
+# 업로드 페이지에서 넘어온 쿼리 파라미터를 받아올 때 사용하는 로직
+# 이 파일 최상단에 넣어 주시면, 직접 URL 파라미터에 맞춰 페이지가 바뀝니다.
 def switch_page(page_name: str):
-    st.experimental_set_query_params(page=page_name)
+    st.query_params = {"page": page_name}
     st.experimental_rerun()
 
-+# 쿼리 파라미터에서 page 값을 읽어서, 이 페이지가 아니면 강제 전환
-params = st.experimental_get_query_params()
+# 쿼리 파라미터에서 page 값을 읽어서, 이 페이지가 아니면 강제 전환
+params = st.query_params
+# default back to "app" if no page param
 if params.get("page", ["app"])[0] != "results":
-    switch_page(params.get("page", ["app"])[0])
-
-
+    switch_page(params["page"][0])
 
 st.set_page_config(page_title="Display Results",
                    layout="wide",
