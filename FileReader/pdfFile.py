@@ -9,7 +9,7 @@ from langchain.docstore.document import Document
 from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 
-from openai.error import AuthenticationError
+from openai import AuthenticationError
 
 
 class PDFDBStore:
