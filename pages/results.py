@@ -12,7 +12,7 @@ import base64
 # 이 파일 최상단에 넣어 주시면, 직접 URL 파라미터에 맞춰 페이지가 바뀝니다.
 def switch_page(page_name: str):
     st.query_params = {"page": page_name}
-    st.experimental_rerun()
+    st.rerun()
 
 # 쿼리 파라미터에서 page 값을 읽어서, 이 페이지가 아니면 강제 전환
 params = st.query_params
