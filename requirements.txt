@@ -16,3 +16,4 @@ requests
 arxiv
 pymupdf
 Pillow
+langchain-community>=0.3.0
